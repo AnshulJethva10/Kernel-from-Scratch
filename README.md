@@ -146,7 +146,7 @@ sudo apt install mtools
 
 ## 1. Bootstrap Assembly 
 - We will now create a file called `boot.s`
-- I have already wrote the file `boot.s` [here](), which has multiple comments, so first read all the comments carefully for better understanding then write is down in you file. This way you won't be just copy-pasting the code, You will be understanding each and every line of the code.
+- I have already wrote the file `boot.s` [here](https://github.com/AnshulJethva10/Kernel-from-Scratch/blob/main/boot.s), which has multiple comments, so first read all the comments carefully for better understanding then write is down in you file. This way you won't be just copy-pasting the code, You will be understanding each and every line of the code.
 - After writing the code, We can then assemble boot.s using:
 ```
 i686-elf-as boot.s -o boot.o
@@ -155,7 +155,7 @@ i686-elf-as boot.s -o boot.o
 ## 2. Implementing the Kernel
 - So far we have written the bootstrap assembly stuf that sets up the processor such that high level languages such as C can be used.
 - Now we will be creating a file `kernel.c` where we will write the logic of our kernel.
-- As above the code is already written with the comments, which you can find [here](). So first read them carefully and then write it down in you file
+- As above the code is already written with the comments, which you can find [here](https://github.com/AnshulJethva10/Kernel-from-Scratch/blob/main/kernel.c). So first read them carefully and then write it down in you file
 - Now compile using:
 ```
 i686-elf-gcc -c kernel.c -o kernel.o -std=gnu99 -ffreestanding -O2 -Wall -Wextra
@@ -163,7 +163,7 @@ i686-elf-gcc -c kernel.c -o kernel.o -std=gnu99 -ffreestanding -O2 -Wall -Wextra
 
 ## 3. Linking the Kernel
 - After assembling `boot.s` and compiling `kernel.c` 2 object files will be generated. To create our final kernel we need to link both of these files for that we need a linker script.
-- Our `linker.ld` script is [here](), read the comments and write it in your linker script.
+- Our `linker.ld` script is [here](https://github.com/AnshulJethva10/Kernel-from-Scratch/blob/main/linker.ld), read the comments and write it in your linker script.
 - We can then link our kernel using:
 ```
 i686-elf-gcc -T linker.ld -o myos.bin -ffreestanding -O2 -nostdlib boot.o kernel.o -lgcc
