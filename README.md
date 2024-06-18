@@ -1,7 +1,7 @@
 # Kernel From Scratch
 Hello Everyone, My name is Anshul Jethva, and in this Repository you will be learning how to create a kernel from scratch.
 
-First things first making a kernel from scratch is not that hard but you need to have some basic knowledge of *kernel* and *operating system* and how it works. So if don't know anything about the operating system and kernel, I suggest you to watch some videos form the youtube or if you want to go deep you can also read books. I have create a Resources section [here]() where you can get links for that
+First things first making a kernel from scratch is not that hard but you need to have some basic knowledge of *kernel* and *operating system* and how it works. So if don't know anything about the operating system and kernel, I suggest you to watch some videos form the youtube or if you want to go deep you can also read books. I have create a Resources section [here](https://github.com/AnshulJethva10/Kernel-from-Scratch/blob/main/README.md#resources) where you can get links for that
 
 So now that you have learned about what is OS, kernel and how does it work we can dive little bit into theory. In this tutorial we will write a simple kernel for 32-bit x86 and boot it, So  first we need to know about how does an x86 machine boot:
 
