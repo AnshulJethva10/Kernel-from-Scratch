@@ -27,14 +27,14 @@ Now that we know how the x86 machine boots, our second step will be setting up t
 
 ## 1. Linux
 I know that most of you are using a Windows OS but to develop a kernel you need a linux OS. There are multiple ways you can set it up but in this repo i am going to use `wsl` which stands for *Windows Server for Linux* and it is pretty easy to set up:
-1. Open PowerShell or Windows Command Prompt in administrator mode by right-clicking and selecting "Run as administrator", enter the wsl --install command, then restart your machine.
+- Open PowerShell or Windows Command Prompt in administrator mode by right-clicking and selecting "Run as administrator", enter the wsl --install command, then restart your machine.
 ```
 wsl --install
 ```
 ![wsl](https://learn.microsoft.com/en-us/windows/wsl/media/wsl-install.png)
 
 
-2. Once you have installed WSL, you will need to create a user account and password for your newly installed Linux distribution.
+- Once you have installed WSL, you will need to create a user account and password for your newly installed Linux distribution.
 
 ![Installation](https://learn.microsoft.com/en-us/windows/wsl/media/ubuntuinstall.png)
 
@@ -130,6 +130,11 @@ export PATH="$HOME/opt/cross/bin:$PATH"
 - This command will add your new compiler to your PATH for this shell session.
 
 # Kernel Building
+- One important thing before we start building our kernel is that in the `~/src` directory create another directory with the name of the your project and inside that create another directory call `src` from now on any file and directory you create should be done inside this directory
+```
+mkdir -p mykernel/src
+```
+- For every new project do the same so you can maintain a structured project directories for ease of access. 
 - Now, to create a kernel we will need 3 files
   - boot.s - kernel entry point that sets up the processor environment
   - kernel.c - your actual kernel routines
